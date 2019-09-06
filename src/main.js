@@ -6,6 +6,7 @@ import Home from './components/Home.vue'
 import Egghead from './components/Egghead.vue'
 import Blog from './components/Blog.vue'
 import GuestPost from './components/GuestPost.vue'
+import PageNotFound from './components/PageNotFound.vue'
 
 Vue.config.productionTip = false
 
@@ -30,6 +31,7 @@ const routes = [
       { path: '/guest', component: GuestPost },
     ],
   },
+  { path: '/pageNotFound', alias: '*', component: PageNotFound },
 ]
 
 const router = new VueRouter({
