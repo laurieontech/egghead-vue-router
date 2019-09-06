@@ -17,15 +17,24 @@ const routes = [
     //show home path, only one of these can exist
     path: '/',
     component: Home,
+    meta: {
+      requiresAuth: false,
+    },
   },
   {
     path: '/egghead',
     component: Egghead,
+    meta: {
+      requiresAuth: true,
+    },
   },
   {
     path: '/blog/:id',
     props: true,
     component: Blog,
+    meta: {
+      requiresAuth: true,
+    },
     children: [
       { path: 'guest', component: GuestPost },
       { path: '/guest', component: GuestPost },
