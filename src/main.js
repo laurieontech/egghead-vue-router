@@ -31,10 +31,11 @@ const routes = [
   },
   {
     path: '/blog/:id',
+    name: 'blog',
     props: true,
     component: Blog,
     meta: {
-      requiresAuth: true,
+      requiresAuth: false,
     },
     children: [
       { path: 'guest', component: GuestPost },
