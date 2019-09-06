@@ -21,7 +21,8 @@ const routes = [
     component: Egghead,
   },
   {
-    path: '/egghead',
+    path: '/blog/:id',
+    props: true,
     component: Blog,
   },
 ]
