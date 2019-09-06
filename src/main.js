@@ -5,6 +5,7 @@ import VueRouter from 'vue-router'
 import Home from './components/Home.vue'
 import Egghead from './components/Egghead.vue'
 import Blog from './components/Blog.vue'
+import GuestPost from './components/GuestPost.vue'
 
 Vue.config.productionTip = false
 
@@ -24,6 +25,10 @@ const routes = [
     path: '/blog/:id',
     props: true,
     component: Blog,
+    children: [
+      { path: 'guest', component: GuestPost },
+      { path: '/guest', component: GuestPost },
+    ],
   },
 ]
 
